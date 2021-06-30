@@ -1,0 +1,7 @@
+version: '2'
+services:
+  app:
+    build: .
+    volumes:
+      - './src/aws_lambda:/home/aws_lambda'
+    command: pip3.8 install -r /home/aws_lambda/requirements.txt -t /home/aws_lambda
